@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+
+
+void main(void)
+{
+	
+	int x, *wsk, i, temp;
+	char tab[10];
+	
+	printf("Podaj liczbe do przeksztalcenia\n");
+		
+		scanf ("%d", &x);
+		
+		i = 0;
+		
+		while (x)
+		{
+						
+			if ( x % 11 == 0 ){
+				
+				tab [i] = '0';
+			}
+			
+			if (x % 11 < 10){
+			tab[i] = x % 11 + '0';
+			}
+			
+		
+			else
+			
+			tab [i] = 'a';
+					
+			i++;
+			
+			x = x / 11;
+						
+	}
+		
+		
+		wsk = &i;	
+
+	for (int k=*wsk-1; k>=0; k--){
+		
+	
+		printf("%c", tab[k]);
+	}
+
+	
+}
